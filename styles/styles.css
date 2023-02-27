@@ -1,0 +1,144 @@
+body {
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+  overflow: hidden;
+}
+
+.container {
+  width: 80%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  gap: 2rem;
+}
+
+.countdown {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.title {
+  color: var(--purple);
+  line-height: 54px;
+  letter-spacing: 0.105em;
+  text-transform: uppercase;
+}
+
+.counter-time{
+ width: 100%;
+
+ display: grid;
+ grid-template-columns: repeat(4, 1fr);
+ /* espaçamento */
+ gap: 1rem;
+ 
+}
+
+.counter-itens{
+ margin-top: 1.18rem;
+ text-align: center;
+}
+
+.text{
+    font-size: 0.875rem;
+    font-weight: 300;
+    color: var(--text-color);
+}
+
+.number{
+    font-size: 4.5rem;
+    font-weight: 400;
+
+    color: var(--black);
+}
+
+footer{
+    margin-top: 2rem;
+    text-align: center;
+}
+
+footer span{
+    display: block;
+    font-size: 14px;
+    font-weight: 400;
+
+    color: var(--text-color)
+}
+
+footer button {
+    margin-top: 2rem;
+
+    border: 2px solid;
+    border-radius: 10px;
+
+    padding: 1rem 4rem;
+
+    background: var(--purple);
+    color: var(--white);
+    font-weight: 500;
+
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+footer button:hover{
+    border: 2px solid var(--purple);
+    color: var(--purple);
+    background: transparent;
+}
+
+.top-image{
+    width: 100%;
+
+    /* Declaro a posição absoluta  */
+    position: absolute;
+    /* E centralizo ela a onde eu quero  */
+    top: 0;
+    right: 0;
+}
+.bottom-image{
+    width: 100%;
+
+    /* Declaro a posição absoluta  */
+    position: absolute;
+    /* E centralizo ela a onde eu quero  */
+    bottom: -3rem;
+    left: 0;
+}
+
+@media (max-width: 1080px){
+
+    /* Se a tela tiver o tamanho de 1080 */
+    .container{
+        /* Ela vai quebrar em coluna  */
+        flex-direction: column;
+        gap: 4rem;
+    }
+
+    .container .countdown header h1{
+        font-size: 1.8rem;
+    }
+
+    .container .hero-image{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .container .hero-image img{
+        width: 90%;
+    }
+
+}
+
+
+
